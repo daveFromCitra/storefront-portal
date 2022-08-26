@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPG-Creative Services Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css"> -->
+    <script src="./script.js" type="module" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DPG Design Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="login-btn">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logout-btn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- <section id="logged-out" class="py-4">
+        <div class="container-sm">
+            <h1>You there? Identify yourself!</h1>
+            <img src="https://m.media-amazon.com/images/I/61DpzbmqsWL._AC_SX679_.jpg" alt="I am McLovin">
+        </div>
+    </section> -->
+    <section id="logged-in">
+        <div class="container-sm" id="main-card-area">
+            <div class="py-4">
+                <h1>DPG Creative Services Portal</h1>
+                <!-- <h4 id="alt-subtitle">(Aim away from face)</h4> -->
+                <!-- <div style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); width: fit-content; padding: 1rem">
+                    <img src="https://i.giphy.com/media/w7mLEAMcpjrpe/giphy.webp" alt="dance"><span id="comic-sans" style="font-family: cursive; font-size: 1.5rem; color:blue; font-weight: bold; background: lightgreen; padding-top: 4rem; padding-bottom: 3rem;">(: <span style="letter-spacing: -1.5pt;">graphic</span> <span style="letter-spacing: 4pt;">design</span> is my <span style="color: red;">Passion</span> :)</span><img style="max-height: 10rem;" src="https://images.unsplash.com/photo-1605884659120-51c2ab904e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZyb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="design frog">
+                </div> -->
+                <hr>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Request Design Work
+                </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Design Request</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3" id="reprint-form">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">CSR Name</label>
+                                        <input class="form-control" type="text" id="csr-name">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Sales Rep Name</label>
+                                        <input class="form-control" type="text" id="sales-name">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Customer Contact</label>
+                                        <input class="form-control" type="text" id="customer-contact">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Job Type</label>
+                                        <input class="form-control" type="text" id="job-type" list="jobTypes">
+                                        <datalist id="jobTypes">
+                                            <option value="Poster">
+                                            <option value="Card">
+                                            <option value="Logo">
+                                            <option value="Banner">
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <br>
+                                <label class="form-label" for="">Job Title</label>
+                                <input class="form-control" type="text" id="job-title">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">EPMS Number</label>
+                                        <input class="form-control" type="text" id="epms">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Pickup Job</label>
+                                        <input class="form-control" type="text" id="pickup-job">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Due Date</label>
+                                        <input class="form-control" type="date" id="due-date">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Client Budget</label>
+                                        <input class="form-control" type="text" id="client-budget">
+                                    </div>
+                                </div>
+                                <br>
+                                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                                <br>
+                                <label for="exampleFormControlTextarea1" class="form-label">Proofing Instructions</label>
+                                <textarea class="form-control" id="proofing-instructions" rows="3"></textarea>
+                                <br>
+                                <div class="row container">
+                                    <div class="col form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="estimate">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Requires
+                                            Estimate?</label>
+                                    </div>
+                                    <div class="col form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="rush">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Is it a
+                                            rush?</label>
+                                    </div>
+                                </div>
+                                <br>
+                                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                                <input class="form-control" type="file" id="formFileMultiple"- multiple>
+                            </div>
+                            <progress value="0" max="100" id="progress"></progress>
+                            <div id="uploading">
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" id="main-submit" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-sm" id="design-stack">
+            <h2>Design Stack</h2>
+            <div id="filter-boxes" class="my-2">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="requestedCheckbox" value="requested" checked>
+                    <label class="form-check-label" for="inlineCheckbox1">Requested</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inProgressCheckbox" value="inprogress" checked>
+                    <label class="form-check-label" for="inlineCheckbox2">InProgress</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="completeCheckbox" value="complete">
+                    <label class="form-check-label" for="inlineCheckbox2">Complete</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="deletedCheckbox" value="deleted">
+                    <label class="form-check-label" for="inlineCheckbox2">Delete</label>
+                </div>
+            </div>
+
+            <table id="design-stack-list" class="table">
+                <!-- Stack Item -->
+            </table>
+        </div>
+    </section>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">DPG / Creative Services - 2022</a>
+        </div>
+    </nav>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, doc, arrayUnion, updateDoc, orderBy, limit } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
+        import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js"
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHeDzm8w0z6eDdvoVvipSRsfd8sK6yI54",
+            authDomain: "dpg-design-portal.firebaseapp.com",
+            projectId: "dpg-design-portal",
+            storageBucket: "dpg-design-portal.appspot.com",
+            messagingSenderId: "900767928333",
+            appId: "1:900767928333:web:a24c7b6e0c6333743ec544"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // Init Database
+        const db = getFirestore();
+
+        document.getElementById("main-submit").addEventListener("click", (e) => {
+            e.preventDefault();
+            autoIncrementOrderId();
+        })
+
+        function autoIncrementOrderId() {
+            const lastOrder = query(collection(db, "design-jobs"), orderBy("orderNumber", "desc"), limit(1))
+            getDocs(lastOrder)
+                .then((docs) => {
+                    docs.forEach(job => {
+                        let lastOrderNumber = job.data().orderNumber
+                        let orderNumber = lastOrderNumber + 1;
+                        console.log(orderNumber);
+                        submitDesign(orderNumber)
+                    })
+                })
+        };
+
+        function submitDesign(orderNumber) {
+            let csrName = document.getElementById("csr-name").value;
+            let salesName = document.getElementById("sales-name").value;
+            let customerContact = document.getElementById("customer-contact").value;
+            let jobType = document.getElementById("job-type").value;
+            let jobTitle = document.getElementById("job-title").value;
+            let epms = document.getElementById("epms").value;
+            let pickupJob = document.getElementById("pickup-job").value;
+            let dueDate = document.getElementById("due-date").value;
+            let clientBuget = document.getElementById("client-budget").value;
+            let description = document.getElementById("description").value;
+            let proofingInstructions = document.getElementById("proofing-instructions").value;
+            let estimate = document.getElementById("estimate").checked;
+            let rush = document.getElementById("rush").checked;
+            let files = [];
+            // document.getElementsByClassName("file-reference").map((file) => {
+            //     files.push(file.url);
+            // })
+            for (let i = 0; i < document.getElementsByClassName("file-reference").length; i++) {
+                const element = document.getElementsByClassName("file-reference")[i];
+                files.push(element.dataset.url);
+            }
+            console.log(document.getElementsByClassName("file-reference")[0].dataset.url);
+            addDoc(collection(db, "design-jobs"), {
+                csrName: csrName,
+                salesName: salesName,
+                customerContact: customerContact,
+                jobType: jobType,
+                jobTitle: jobTitle,
+                epmsNumber: epms,
+                pickupJob: pickupJob,
+                dueDate: dueDate,
+                clientBudget: clientBuget,
+                description: description,
+                proofingInstruictions: proofingInstructions,
+                requiresEstimate: estimate,
+                rush: rush,
+                status: "requested",
+                orderNumber: orderNumber,
+                files: files
+            })
+            updateStack();
+        }
+
+        function statusCheckboxes() {
+            let checkedBoxes = [];
+            document.getElementById("requestedCheckbox").checked && (checkedBoxes.push("requested"))
+            document.getElementById("completeCheckbox").checked && (checkedBoxes.push("complete"))
+            document.getElementById("deletedCheckbox").checked && (checkedBoxes.push("deleted"))
+            return checkedBoxes
+        }
+
+        function updateStack() {
+            const designListContainer = document.getElementById("design-stack-list");
+            let currentStack = "<tr><th>Order</th><th>EPMS</th><th>CSR Name</th><th>Job Title</th><th>Status</th></tr>";
+
+            // let multi = query(collection(db, "design-jobs"), where("status", "in", statusCheckboxes()))
+            let multi = query(collection(db, "design-jobs"), orderBy("orderNumber"))
+
+            getDocs(multi)
+                .then((docs) => {
+                    docs.forEach(job => {
+                        try {
+                            let refId = job.id;
+                            let jobData = job.data();
+                            let orderNumber = jobData.orderNumber;
+                            let epms = jobData.epmsNumber;
+                            let csrName = jobData.csrName;
+                            let jobTitle = jobData.jobTitle;
+                            let status = jobData.status;
+                            let rowStyle = 'secondary';
+                            switch (status) {
+                                case 'complete':
+                                    rowStyle = 'success'
+                                    break;
+                                case 'requested':
+                                    rowStyle = 'warning'
+                                    break;
+                                case 'pulled':
+                                    rowStyle = 'info'
+                                    break;
+                                case 'printed':
+                                    rowStyle = 'primary'
+                                    break;
+                                case 'deleted':
+                                    rowStyle = 'danger'
+                                    break;
+                            }
+                            let listItem = ` <tr data-ref-id="${refId}" data-item-status="${status}" class="reprint-item table-${rowStyle}"><td>${orderNumber}</td><td>${epms}</td><td>${csrName}</td><td>${jobTitle}</td><td>${status}</td></tr>`
+                            currentStack = currentStack + listItem;
+
+                        }
+                        catch (error) {
+                            console.error(error);
+                        }
+                    });
+
+                    designListContainer.innerHTML = currentStack;
+                })
+                .catch((error) => console.error(error))
+        }
+        updateStack();
+
+
+        const fileUploadArea = document.getElementById("formFileMultiple");
+
+        fileUploadArea.addEventListener("change", () => {
+            for (let i = 0; i < fileUploadArea.files.length; i++) {
+                const file = fileUploadArea.files[i];
+                addPdfsToBucket(file)
+            }
+        })
+
+        function addPdfsToBucket(file) {
+            const storage = getStorage()
+            const fileRef = ref(storage, file.name);
+
+            uploadBytes(fileRef, file)
+                .then((file) => getDownloadURL(fileRef)
+                    .then((url) => {
+                        document.getElementById("uploading").innerHTML += `<div class="file-reference" data-url="${url}"> ${fileRef.name} uploaded </div>`;
+                    })
+                    .catch((error) => console.error(error))
+                )
+                .catch((error) => console.error(error));
+        }
+
+    </script> -->
+</body>
+
+</html>

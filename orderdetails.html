@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Job</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css"> -->
+    <script src="./order-script.js" type="module" defer></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DPG Design Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="login-btn">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="logout-btn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Area -->
+    <section class="container">
+        <a href="./admin.html"><button class="btn btn-primary my-4">Back</button></a>
+        <div class="input-group w-50">
+            <button class="btn btn-success" id="main-update" onclick="updateItem()">Update</button>
+            <select id="updateCommand" class="form-select" aria-label="Default select example">
+                <option value="requested">Requested</option>
+                <option value="inprogress" selected>In Progress</option>
+                <option value="complete">Complete</option>
+                <option value="deleted">Delete</option>
+            </select>
+            <button id="refresh-button" class="btn">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+        </div>
+        <br>
+        <b>Contact your the CSR for more instructions.</b>
+        <div class="container row" id="order-info">
+            <!-- Info Area -->
+        </div>
+    </section>
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">DPG / Creative Services - 2022</a>
+        </div>
+    </nav>
+</body>
+</html>
+
