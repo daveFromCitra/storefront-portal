@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPG-Creative Services Portal</title>
+    <title>DPG-Storefront Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -17,13 +17,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css"> -->
     <script src="./script.js" type="module" defer></script>
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">DPG Design Portal</a>
+            <a class="navbar-brand" href="#">DPG Storefront Portal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -50,16 +52,16 @@
     <section id="logged-in">
         <div class="container-sm" id="main-card-area">
             <div class="py-4">
-                <h1>DPG Creative Services Portal</h1>
-                <!-- <h4 id="alt-subtitle">(Aim away from face)</h4> -->
-                <!-- <div style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); width: fit-content; padding: 1rem">
+                <h1>DPG Storefront Portal</h1>
+                <!-- <h4 id="alt-subtitle">(Aim away from face)</h4>
+                <div style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); width: fit-content; padding: 1rem">
                     <img src="https://i.giphy.com/media/w7mLEAMcpjrpe/giphy.webp" alt="dance"><span id="comic-sans" style="font-family: cursive; font-size: 1.5rem; color:blue; font-weight: bold; background: lightgreen; padding-top: 4rem; padding-bottom: 3rem;">(: <span style="letter-spacing: -1.5pt;">graphic</span> <span style="letter-spacing: 4pt;">design</span> is my <span style="color: red;">Passion</span> :)</span><img style="max-height: 10rem;" src="https://images.unsplash.com/photo-1605884659120-51c2ab904e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZyb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="design frog">
                 </div> -->
                 <hr>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">
-                    Request Design Work
+                    Request Storefront Work
                 </button>
             </div>
             <!-- Modal -->
@@ -68,70 +70,458 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Design Request</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Storefront Request</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3" id="reprint-form">
+                                <!-- - - - - - - - - -->
+                                <!-- GENERAL FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="sales-name">Sales Rep Name</label>
+                                        <input class="form-control" type="text" id="sales-name">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Sales Rep Email</label>
+                                        <input class="form-control" type="email" id="sales-email">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
                                 <div class="row">
                                     <div class="col">
                                         <label class="form-label" for="">CSR Name</label>
                                         <input class="form-control" type="text" id="csr-name">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" for="">Sales Rep Name</label>
-                                        <input class="form-control" type="text" id="sales-name">
+                                        <label class="form-label" for="">CSR Email</label>
+                                        <input class="form-control" type="text" id="csr-email">
                                     </div>
                                 </div>
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <div class="row">
                                     <div class="col">
-                                        <label class="form-label" for="">Customer Contact</label>
-                                        <input class="form-control" type="text" id="customer-contact">
+                                        <label class="form-label" for="">Customer Name</label>
+                                        <input class="form-control" type="text" id="customer-name">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" for="">Job Type</label>
-                                        <input class="form-control" type="text" id="job-type" list="jobTypes">
-                                        <datalist id="jobTypes">
-                                            <option value="Poster">
-                                            <option value="Card">
-                                            <option value="Logo">
-                                            <option value="Banner">
-                                        </datalist>
+                                        <label class="form-label" for="">Site Name</label>
+                                        <input class="form-control" type="text" id="site-name">
                                     </div>
                                 </div>
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Site URL</label>
+                                        <input class="form-control" type="text" id="site-url">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <label class="form-label" for="">Job Title</label>
                                 <input class="form-control" type="text" id="job-title">
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <div class="row">
                                     <div class="col">
-                                        <label class="form-label" for="">EPMS Number</label>
-                                        <input class="form-control" type="text" id="epms">
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label" for="">Pickup Job</label>
-                                        <input class="form-control" type="text" id="pickup-job">
+                                        <label class="form-label" for="">Job Type</label>
+                                        <select class="form-select" aria-label="Default select example" id="job-type">
+                                            <option selected>-</option>
+                                            <option value="storefront-build-fields">Full Storefront Build</option>
+                                            <option value="product-fields">Product Build</option>
+                                            <option value="product-fields">Product Update</option>
+                                            <option value="category-fields">Category Build</option>
+                                            <option value="category-fields">Category Update</option>
+                                            <option value="style-content-change-fields">Style Change</option>
+                                            <option value="style-content-change-fields">Content Change</option>
+                                            <option value="shipping-fields">Shipping Method Update</option>
+                                            <option value="payment-fields">Payment Method Update</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <label class="form-label" for="">Due Date</label>
-                                        <input class="form-control" type="date" id="due-date">
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <!-- - - - - - - - - -->
+                                <!-- STOREFRONT FULL BUILD FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="storefront-build-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Store Type</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-type">
+                                                <option value="shared" selected>Shared</option>
+                                                <option value="solo">Solo</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Style Customization</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-customization">
+                                                <option value="minimal" selected>Minimal</option>
+                                                <option value="heavy">Heavy</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        <label class="form-label" for="">Client Budget</label>
-                                        <input class="form-control" type="text" id="client-budget">
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row container">
+                                        <div class="col form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="sb-tax">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Store
+                                                Taxable?</label>
+                                        </div>
+                                        <div class="col form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="sb-customer-admin">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Need Customer
+                                                Admin?</label>
+                                        </div>
                                     </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">User Access</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-user-access">
+                                                <option value="closed" selected>Closed</option>
+                                                <option value="open">Open</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Custom URL</label>
+                                            <input class="form-control" type="text" id="sb-url">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row" id="sb-shipping-method">
+                                        <label class="form-label" for="">Shipping Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Ground
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Saver
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Two Day
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS One Day
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    USPS Priority
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    USPS Priority Express
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    Delivery
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    PickUp
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
                                 </div>
-                                <br>
+                                <!-- - - - - - - - - -->
+                                <!-- PRODUCT BUILD/UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="product-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Product Type</label>
+                                            <select class="form-select" aria-label="Default select example" id="p-type">
+                                                <option value="static">Static</option>
+                                                <option value="fulfillment">Fulfillment</option>
+                                                <option value="var-simple">Variable (simple)</option>
+                                                <option value="var-complex">Variable (complex)</option>
+                                                <option value="var-csv">Variable (CSV Upload)</option>
+                                                <option value="upload">Upload</option>                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Product Name</label>
+                                            <input class="form-control" type="text" id="p-name">
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Category Name</label>
+                                            <input class="form-control" type="text" id="p-category">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Price</label>
+                                            <input class="form-control" type="text" id="p-price">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Thumbnail</label>
+                                    <input class="form-control" type="file" id="formThumbFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <br>
+                                    <div id="thumb-uploading">
+
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Print File</label>
+                                    <input class="form-control" type="file" id="formPrintFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <br>
+                                    <div id="print-uploading">
+
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+                                
+                                <!-- - - - - - - - - -->
+                                <!-- Style/Content change FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="style-content-change-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">What needs to be changed</label>
+                                            <input class="form-control" type="text" id="style-content-what">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Where does the change need to be made? (URL)</label>
+                                            <input class="form-control" type="text" id="style-content-where">
+                                        </div>
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- CATEGORY BUILD/UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="category-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Category Name</label>
+                                            <input class="form-control" type="text" id="cat-name">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Products</label>
+                                            <input class="form-control" type="text" id="cat-products">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Thumbnail</label>
+                                    <input class="form-control" type="file" id="formFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- SHIPPING FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="shipping-fields">
+                                    <div class="row">
+                                        <label class="form-label" for="">Change Shipping Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    UPS Ground
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    UPS Saver
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    UPS Two Day
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    UPS One Day
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    USPS Priority
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    USPS Priority Express
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Delivery
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    PickUp
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                </div>
+                                
+                                <!-- - - - - - - - - -->
+                                <!-- PAYMENT FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="payment-fields">
+                                    <div class="row">
+                                        <label class="form-label" for="">Payment Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Credit Card
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    POs
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- URL UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="url-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">New URL</label>
+                                            <input class="form-control" type="text" id="client-name">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- USER CREATION FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                
+
+                                <!-- - - - - - - - - -->
+                                <!-- PERMISSIONS FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- UPDATE EMAIL FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- TAX FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- Add Discount FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- OTHER FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- GENERAL FIELDS  -->
+                                <!-- - - - - - - - - -->
                                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                                 <textarea class="form-control" id="description" rows="3"></textarea>
                                 <br>
-                                <label for="exampleFormControlTextarea1" class="form-label">Proofing Instructions</label>
-                                <textarea class="form-control" id="proofing-instructions" rows="3"></textarea>
-                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  
                                 <div class="row container">
                                     <div class="col form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch" id="estimate">
@@ -145,13 +535,31 @@
                                     </div>
                                 </div>
                                 <br>
-                                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-                                <input class="form-control" type="file" id="formFileMultiple"- multiple>
-                            </div>
-                            <progress value="0" max="100" id="progress"></progress>
-                            <div id="uploading">
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Requested Due Date</label>
+                                        <input class="form-control" type="date" id="due-date">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <label class="form-label" for="">Client Name</label>
+                                        <input class="form-control" type="text" id="client-name">
+                                    </div> -->
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <!-- <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                                <input class="form-control" type="file" id="formFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple> -->
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                             </div>
+                            <!-- <progress value="0" max="100" id="progress"></progress>
+                            <div id="uploading">
+
+                            </div> -->
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -163,23 +571,23 @@
 
         </div>
         <div class="container-sm" id="design-stack">
-            <h2>Design Stack</h2>
+            <h2>Storefront Stack</h2>
             <div id="filter-boxes" class="my-2">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="requestedCheckbox" value="requested" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">Requested</label>
+                    <label class="form-check-label" for="requestedCheckbox">Requested</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inProgressCheckbox" value="inprogress" checked>
-                    <label class="form-check-label" for="inlineCheckbox2">InProgress</label>
+                    <label class="form-check-label" for="inProgressCheckbox">InProgress</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="completeCheckbox" value="complete">
-                    <label class="form-check-label" for="inlineCheckbox2">Complete</label>
+                    <label class="form-check-label" for="completeCheckbox">Complete</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="deletedCheckbox" value="deleted">
-                    <label class="form-check-label" for="inlineCheckbox2">Delete</label>
+                    <label class="form-check-label" for="deletedCheckbox">Delete</label>
                 </div>
             </div>
 
@@ -193,174 +601,6 @@
             <a class="navbar-brand">DPG / Creative Services - 2022</a>
         </div>
     </nav>
-    <!-- <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
-        import { getFirestore, collection, addDoc, query, where, getDocs, getDoc, setDoc, doc, arrayUnion, updateDoc, orderBy, limit } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
-        import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
-        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js"
-
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAHeDzm8w0z6eDdvoVvipSRsfd8sK6yI54",
-            authDomain: "dpg-design-portal.firebaseapp.com",
-            projectId: "dpg-design-portal",
-            storageBucket: "dpg-design-portal.appspot.com",
-            messagingSenderId: "900767928333",
-            appId: "1:900767928333:web:a24c7b6e0c6333743ec544"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        // Init Database
-        const db = getFirestore();
-
-        document.getElementById("main-submit").addEventListener("click", (e) => {
-            e.preventDefault();
-            autoIncrementOrderId();
-        })
-
-        function autoIncrementOrderId() {
-            const lastOrder = query(collection(db, "design-jobs"), orderBy("orderNumber", "desc"), limit(1))
-            getDocs(lastOrder)
-                .then((docs) => {
-                    docs.forEach(job => {
-                        let lastOrderNumber = job.data().orderNumber
-                        let orderNumber = lastOrderNumber + 1;
-                        console.log(orderNumber);
-                        submitDesign(orderNumber)
-                    })
-                })
-        };
-
-        function submitDesign(orderNumber) {
-            let csrName = document.getElementById("csr-name").value;
-            let salesName = document.getElementById("sales-name").value;
-            let customerContact = document.getElementById("customer-contact").value;
-            let jobType = document.getElementById("job-type").value;
-            let jobTitle = document.getElementById("job-title").value;
-            let epms = document.getElementById("epms").value;
-            let pickupJob = document.getElementById("pickup-job").value;
-            let dueDate = document.getElementById("due-date").value;
-            let clientBuget = document.getElementById("client-budget").value;
-            let description = document.getElementById("description").value;
-            let proofingInstructions = document.getElementById("proofing-instructions").value;
-            let estimate = document.getElementById("estimate").checked;
-            let rush = document.getElementById("rush").checked;
-            let files = [];
-            // document.getElementsByClassName("file-reference").map((file) => {
-            //     files.push(file.url);
-            // })
-            for (let i = 0; i < document.getElementsByClassName("file-reference").length; i++) {
-                const element = document.getElementsByClassName("file-reference")[i];
-                files.push(element.dataset.url);
-            }
-            console.log(document.getElementsByClassName("file-reference")[0].dataset.url);
-            addDoc(collection(db, "design-jobs"), {
-                csrName: csrName,
-                salesName: salesName,
-                customerContact: customerContact,
-                jobType: jobType,
-                jobTitle: jobTitle,
-                epmsNumber: epms,
-                pickupJob: pickupJob,
-                dueDate: dueDate,
-                clientBudget: clientBuget,
-                description: description,
-                proofingInstruictions: proofingInstructions,
-                requiresEstimate: estimate,
-                rush: rush,
-                status: "requested",
-                orderNumber: orderNumber,
-                files: files
-            })
-            updateStack();
-        }
-
-        function statusCheckboxes() {
-            let checkedBoxes = [];
-            document.getElementById("requestedCheckbox").checked && (checkedBoxes.push("requested"))
-            document.getElementById("completeCheckbox").checked && (checkedBoxes.push("complete"))
-            document.getElementById("deletedCheckbox").checked && (checkedBoxes.push("deleted"))
-            return checkedBoxes
-        }
-
-        function updateStack() {
-            const designListContainer = document.getElementById("design-stack-list");
-            let currentStack = "<tr><th>Order</th><th>EPMS</th><th>CSR Name</th><th>Job Title</th><th>Status</th></tr>";
-
-            // let multi = query(collection(db, "design-jobs"), where("status", "in", statusCheckboxes()))
-            let multi = query(collection(db, "design-jobs"), orderBy("orderNumber"))
-
-            getDocs(multi)
-                .then((docs) => {
-                    docs.forEach(job => {
-                        try {
-                            let refId = job.id;
-                            let jobData = job.data();
-                            let orderNumber = jobData.orderNumber;
-                            let epms = jobData.epmsNumber;
-                            let csrName = jobData.csrName;
-                            let jobTitle = jobData.jobTitle;
-                            let status = jobData.status;
-                            let rowStyle = 'secondary';
-                            switch (status) {
-                                case 'complete':
-                                    rowStyle = 'success'
-                                    break;
-                                case 'requested':
-                                    rowStyle = 'warning'
-                                    break;
-                                case 'pulled':
-                                    rowStyle = 'info'
-                                    break;
-                                case 'printed':
-                                    rowStyle = 'primary'
-                                    break;
-                                case 'deleted':
-                                    rowStyle = 'danger'
-                                    break;
-                            }
-                            let listItem = ` <tr data-ref-id="${refId}" data-item-status="${status}" class="reprint-item table-${rowStyle}"><td>${orderNumber}</td><td>${epms}</td><td>${csrName}</td><td>${jobTitle}</td><td>${status}</td></tr>`
-                            currentStack = currentStack + listItem;
-
-                        }
-                        catch (error) {
-                            console.error(error);
-                        }
-                    });
-
-                    designListContainer.innerHTML = currentStack;
-                })
-                .catch((error) => console.error(error))
-        }
-        updateStack();
-
-
-        const fileUploadArea = document.getElementById("formFileMultiple");
-
-        fileUploadArea.addEventListener("change", () => {
-            for (let i = 0; i < fileUploadArea.files.length; i++) {
-                const file = fileUploadArea.files[i];
-                addPdfsToBucket(file)
-            }
-        })
-
-        function addPdfsToBucket(file) {
-            const storage = getStorage()
-            const fileRef = ref(storage, file.name);
-
-            uploadBytes(fileRef, file)
-                .then((file) => getDownloadURL(fileRef)
-                    .then((url) => {
-                        document.getElementById("uploading").innerHTML += `<div class="file-reference" data-url="${url}"> ${fileRef.name} uploaded </div>`;
-                    })
-                    .catch((error) => console.error(error))
-                )
-                .catch((error) => console.error(error));
-        }
-
-    </script> -->
 </body>
 
 </html>

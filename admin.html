@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPG-Creative Services Portal</title>
+    <title>DPG-Storefront Admin Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -17,13 +17,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css"> -->
     <script src="./admin-script.js" type="module" defer></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">DPG Design Portal</a>
+            <a class="navbar-brand" href="#">DPG Storefront Portal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -50,9 +51,9 @@
     <section id="logged-in">
         <div class="container-sm" id="main-card-area">
             <div class="py-4">
-                <h1>DPG Creative Services Portal</h1>
-                <!-- <h4 id="alt-subtitle">(Aim away from face)</h4> -->
-                <!-- <div style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); width: fit-content; padding: 1rem">
+                <h1>DPG Storefront Admin Portal</h1>
+                <!-- <h4 id="alt-subtitle">(Aim away from face)</h4>
+                <div style="background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); width: fit-content; padding: 1rem">
                     <img src="https://i.giphy.com/media/w7mLEAMcpjrpe/giphy.webp" alt="dance"><span id="comic-sans" style="font-family: cursive; font-size: 1.5rem; color:blue; font-weight: bold; background: lightgreen; padding-top: 4rem; padding-bottom: 3rem;">(: <span style="letter-spacing: -1.5pt;">graphic</span> <span style="letter-spacing: 4pt;">design</span> is my <span style="color: red;">Passion</span> :)</span><img style="max-height: 10rem;" src="https://images.unsplash.com/photo-1605884659120-51c2ab904e8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGZyb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="design frog">
                 </div> -->
                 <hr>
@@ -72,70 +73,458 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Design Request</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Storefront Request</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3" id="reprint-form">
+                                <!-- - - - - - - - - -->
+                                <!-- GENERAL FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="sales-name">Sales Rep Name</label>
+                                        <input class="form-control" type="text" id="sales-name">
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label" for="">Sales Rep Email</label>
+                                        <input class="form-control" type="email" id="sales-email">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
                                 <div class="row">
                                     <div class="col">
                                         <label class="form-label" for="">CSR Name</label>
                                         <input class="form-control" type="text" id="csr-name">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" for="">Sales Rep Name</label>
-                                        <input class="form-control" type="text" id="sales-name">
+                                        <label class="form-label" for="">CSR Email</label>
+                                        <input class="form-control" type="text" id="csr-email">
                                     </div>
                                 </div>
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <div class="row">
                                     <div class="col">
-                                        <label class="form-label" for="">Customer Contact</label>
-                                        <input class="form-control" type="text" id="customer-contact">
+                                        <label class="form-label" for="">Customer Name</label>
+                                        <input class="form-control" type="text" id="customer-name">
                                     </div>
                                     <div class="col">
-                                        <label class="form-label" for="">Job Type</label>
-                                        <input class="form-control" type="text" id="job-type" list="jobTypes">
-                                        <datalist id="jobTypes">
-                                            <option value="Poster">
-                                            <option value="Card">
-                                            <option value="Logo">
-                                            <option value="Banner">
-                                        </datalist>
+                                        <label class="form-label" for="">Site Name</label>
+                                        <input class="form-control" type="text" id="site-name">
                                     </div>
                                 </div>
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Site URL</label>
+                                        <input class="form-control" type="text" id="site-url">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <label class="form-label" for="">Job Title</label>
                                 <input class="form-control" type="text" id="job-title">
                                 <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                                 <div class="row">
                                     <div class="col">
-                                        <label class="form-label" for="">EPMS Number</label>
-                                        <input class="form-control" type="text" id="epms">
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label" for="">Pickup Job</label>
-                                        <input class="form-control" type="text" id="pickup-job">
+                                        <label class="form-label" for="">Job Type</label>
+                                        <select class="form-select" aria-label="Default select example" id="job-type">
+                                            <option selected>-</option>
+                                            <option value="storefront-build-fields">Full Storefront Build</option>
+                                            <option value="product-fields">Product Build</option>
+                                            <option value="product-fields">Product Update</option>
+                                            <option value="category-fields">Category Build</option>
+                                            <option value="category-fields">Category Update</option>
+                                            <option value="style-content-change-fields">Style Change</option>
+                                            <option value="style-content-change-fields">Content Change</option>
+                                            <option value="shipping-fields">Shipping Method Update</option>
+                                            <option value="payment-fields">Payment Method Update</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col">
-                                        <label class="form-label" for="">Due Date</label>
-                                        <input class="form-control" type="date" id="due-date">
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <!-- - - - - - - - - -->
+                                <!-- STOREFRONT FULL BUILD FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="storefront-build-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Store Type</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-type">
+                                                <option value="shared" selected>Shared</option>
+                                                <option value="solo">Solo</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Style Customization</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-customization">
+                                                <option value="minimal" selected>Minimal</option>
+                                                <option value="heavy">Heavy</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        <label class="form-label" for="">Client Budget</label>
-                                        <input class="form-control" type="text" id="client-budget">
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row container">
+                                        <div class="col form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="sb-tax">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Store
+                                                Taxable?</label>
+                                        </div>
+                                        <div class="col form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="sb-customer-admin">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Need Customer
+                                                Admin?</label>
+                                        </div>
                                     </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">User Access</label>
+                                            <select class="form-select" aria-label="Default select example" id="sb-user-access">
+                                                <option value="closed" selected>Closed</option>
+                                                <option value="open">Open</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Custom URL</label>
+                                            <input class="form-control" type="text" id="sb-url">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row" id="sb-shipping-method">
+                                        <label class="form-label" for="">Shipping Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Ground
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Saver
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS Two Day
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    UPS One Day
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    USPS Priority
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    USPS Priority Express
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    Delivery
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <label class="form-check-label" for="">
+                                                    PickUp
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
                                 </div>
-                                <br>
+                                <!-- - - - - - - - - -->
+                                <!-- PRODUCT BUILD/UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="product-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Product Type</label>
+                                            <select class="form-select" aria-label="Default select example" id="p-type">
+                                                <option value="static">Static</option>
+                                                <option value="fulfillment">Fulfillment</option>
+                                                <option value="var-simple">Variable (simple)</option>
+                                                <option value="var-complex">Variable (complex)</option>
+                                                <option value="var-csv">Variable (CSV Upload)</option>
+                                                <option value="upload">Upload</option>                                            
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Product Name</label>
+                                            <input class="form-control" type="text" id="p-name">
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="">Category Name</label>
+                                            <input class="form-control" type="text" id="p-category">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Price</label>
+                                            <input class="form-control" type="text" id="p-price">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Thumbnail</label>
+                                    <input class="form-control" type="file" id="formThumbFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <br>
+                                    <div id="thumb-uploading">
+
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Print File</label>
+                                    <input class="form-control" type="file" id="formPrintFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <br>
+                                    <div id="print-uploading">
+
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+                                
+                                <!-- - - - - - - - - -->
+                                <!-- Style/Content change FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="style-content-change-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">What needs to be changed</label>
+                                            <input class="form-control" type="text" id="style-content-what">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Where does the change need to be made? (URL)</label>
+                                            <input class="form-control" type="text" id="style-content-where">
+                                        </div>
+                                    </div>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- CATEGORY BUILD/UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="category-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Category Name</label>
+                                            <input class="form-control" type="text" id="cat-name">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">Products</label>
+                                            <input class="form-control" type="text" id="cat-products">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                    <label for="formFileMultiple" class="form-label">Upload Thumbnail</label>
+                                    <input class="form-control" type="file" id="formFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- SHIPPING FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="shipping-fields">
+                                    <div class="row">
+                                        <label class="form-label" for="">Change Shipping Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    UPS Ground
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    UPS Saver
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    UPS Two Day
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    UPS One Day
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    USPS Priority
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    USPS Priority Express
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Delivery
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckChecked">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    PickUp
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+                                </div>
+                                
+                                <!-- - - - - - - - - -->
+                                <!-- PAYMENT FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="payment-fields">
+                                    <div class="row">
+                                        <label class="form-label" for="">Payment Methods</label>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Credit Card
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    POs
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- URL UPDATE FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                <div id="url-fields">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">New URL</label>
+                                            <input class="form-control" type="text" id="client-name">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                </div>
+
+                                <!-- - - - - - - - - -->
+                                <!-- USER CREATION FIELDS  -->
+                                <!-- - - - - - - - - -->
+                                
+
+                                <!-- - - - - - - - - -->
+                                <!-- PERMISSIONS FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- UPDATE EMAIL FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- TAX FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- Add Discount FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- OTHER FIELDS  -->
+                                <!-- - - - - - - - - -->
+
+
+
+                                <!-- - - - - - - - - -->
+                                <!-- GENERAL FIELDS  -->
+                                <!-- - - - - - - - - -->
                                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                                 <textarea class="form-control" id="description" rows="3"></textarea>
                                 <br>
-                                <label for="exampleFormControlTextarea1" class="form-label">Proofing Instructions</label>
-                                <textarea class="form-control" id="proofing-instructions" rows="3"></textarea>
-                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  
                                 <div class="row container">
                                     <div class="col form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch" id="estimate">
@@ -149,13 +538,31 @@
                                     </div>
                                 </div>
                                 <br>
-                                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-                                <input class="form-control" type="file" id="formFileMultiple" accept=".pdf, .png, .jpeg, .tiff" multiple>
-                            </div>
-                            <progress value="0" max="100" id="progress"></progress>
-                            <div id="uploading">
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label" for="">Requested Due Date</label>
+                                        <input class="form-control" type="date" id="due-date">
+                                    </div>
+                                    <!-- <div class="col">
+                                        <label class="form-label" for="">Client Name</label>
+                                        <input class="form-control" type="text" id="client-name">
+                                    </div> -->
+                                </div>
+                                <br>
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+                                <!-- <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                                <input class="form-control" type="file" id="formFileMultiple"
+                                    accept=".pdf, .png, .jpeg, .tiff" multiple> -->
+                                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
                             </div>
+                            <!-- <progress value="0" max="100" id="progress"></progress>
+                            <div id="uploading">
+
+                            </div> -->
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -167,23 +574,23 @@
 
         </div>
         <div class="container-sm" id="design-stack">
-            <h2>Design Stack</h2>
+            <h2>Storefront` Stack</h2>
             <div id="filter-boxes" class="my-2">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="requestedCheckbox" value="requested" checked>
-                    <label class="form-check-label" for="inlineCheckbox1">Requested</label>
+                    <label class="form-check-label" for="requestedCheckbox">Requested</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inProgressCheckbox" value="inprogress" checked>
-                    <label class="form-check-label" for="inlineCheckbox2">InProgress</label>
+                    <label class="form-check-label" for="inProgressCheckbox">InProgress</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="completeCheckbox" value="complete">
-                    <label class="form-check-label" for="inlineCheckbox2">Complete</label>
+                    <label class="form-check-label" for="completeCheckbox">Complete</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="deletedCheckbox" value="deleted">
-                    <label class="form-check-label" for="inlineCheckbox2">Delete</label>
+                    <label class="form-check-label" for="deletedCheckbox">Delete</label>
                 </div>
             </div>
             <div class="input-group">
